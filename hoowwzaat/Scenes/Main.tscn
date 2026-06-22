@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cxh4f803iij2o"]
+
+[ext_resource type="Texture2D" uid="uid://bqhptpq7t6pxn" path="res://Assests/Character.png" id="1_idj7w"]
+[ext_resource type="PackedScene" uid="uid://0xe7piiccq4m" path="res://Scenes/ball.tscn" id="2_kln2b"]
+
+[node name="Node2D" type="Node2D" unique_id=1550848327]
+position = Vector2(-1, -2)
+
+[node name="Character" type="Sprite2D" parent="." unique_id=405411614]
+position = Vector2(180, 430.00003)
+scale = Vector2(5.55, 5.55)
+texture = ExtResource("1_idj7w")
+
+[node name="Ball" parent="." unique_id=1531333167 instance=ExtResource("2_kln2b")]
+position = Vector2(-47, 46)
