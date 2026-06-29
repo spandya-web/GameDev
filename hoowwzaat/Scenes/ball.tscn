@@ -3,19 +3,19 @@
 [ext_resource type="Script" uid="uid://bpfu5wxufkjab" path="res://Scripts/ball.gd" id="1_d60mj"]
 [ext_resource type="Texture2D" uid="uid://mbexoe5vhv84" path="res://Assests/Cricket_ball.png" id="2_ij5cq"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_ij5cq"]
-radius = 26.683329
+[sub_resource type="CircleShape2D" id="CircleShape2D_376qj"]
+radius = 26.172504
 
 [node name="Ball" type="Area2D" unique_id=1531333167]
 script = ExtResource("1_d60mj")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=728580474]
-position = Vector2(1064, 449)
-shape = SubResource("CircleShape2D_ij5cq")
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1343785165]
+position = Vector2(0, 4)
+shape = SubResource("CircleShape2D_376qj")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1065209824]
-
-[node name="CricketBall" type="Sprite2D" parent="." unique_id=1785061345]
-position = Vector2(1071, 451)
+[node name="Ball2" type="Sprite2D" parent="." unique_id=1785061345]
+position = Vector2(7, 5)
 scale = Vector2(2.1875, 2.1875)
 texture = ExtResource("2_ij5cq")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

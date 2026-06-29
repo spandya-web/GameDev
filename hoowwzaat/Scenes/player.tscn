@@ -69,12 +69,6 @@ rotation = -2.2444935
 [node name="Marker2D" type="Marker2D" parent="Bat" unique_id=1430017019]
 position = Vector2(84.82088, -131.89926)
 
-[node name="ColorRect" type="ColorRect" parent="Bat/Marker2D" unique_id=461781270]
-offset_left = -6.820861
-offset_top = -6.1007247
-offset_right = 7.7265024
-offset_bottom = 6.80452
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bat" unique_id=1669759967]
 position = Vector2(62, 0)
 shape = SubResource("RectangleShape2D_cvnsp")
@@ -87,3 +81,5 @@ texture = ExtResource("3_6t5aa")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=515122475]
 libraries/ = SubResource("AnimationLibrary_fkybt")
+
+[connection signal="area_entered" from="Bat" to="." method="_on_area_entered"]

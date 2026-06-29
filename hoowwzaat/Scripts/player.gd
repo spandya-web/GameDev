@@ -15,10 +15,10 @@ func swing():
 
 	if swinging:
 		return
-
+		
 	swinging = true
 	bat.monitoring = true
 	animation_player.play("swing")
-	await get_tree().create_timer(0.2).timeout
+	await get_tree().create_timer(0.1).timeout
 	bat.monitoring = false
 	swinging = false
