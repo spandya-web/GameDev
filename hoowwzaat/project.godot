@@ -15,6 +15,10 @@ run/main_scene="uid://plui5mrn2715"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[editor]
+
+movie_writer/movie_file="C:/Users/shrut/Desktop/12DT/prototype_test.avi"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"

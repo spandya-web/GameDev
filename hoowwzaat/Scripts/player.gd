@@ -22,3 +22,4 @@ func swing():
 	await get_tree().create_timer(0.1).timeout
 	bat.monitoring = false
 	swinging = false
+	
