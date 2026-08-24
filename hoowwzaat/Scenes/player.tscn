@@ -51,7 +51,7 @@ _data = {
 script = ExtResource("1_cvnsp")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=477026641]
-position = Vector2(0, 3)
+position = Vector2(1, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2079215129]
 position = Vector2(142, 98)

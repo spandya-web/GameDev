@@ -1,0 +1,98 @@
+[gd_scene format=3 uid="uid://or36wnms48as"]
+
+[ext_resource type="Script" uid="uid://bnp6b58cxxmy8" path="res://Scripts/settings.gd" id="1_4hxq3"]
+[ext_resource type="Texture2D" uid="uid://n5t7g7ubhxev" path="res://Assests/Grass_sky.png" id="2_yrknh"]
+[ext_resource type="Texture2D" uid="uid://bvdk5k1kunqhp" path="res://Assests/Cricket_bat_design.png" id="3_w1nw0"]
+[ext_resource type="Texture2D" uid="uid://mbexoe5vhv84" path="res://Assests/Cricket_ball.png" id="4_w1nw0"]
+[ext_resource type="FontFile" uid="uid://bqyeybovmsbrc" path="res://Assests/CutePixel.ttf" id="5_mjqtt"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ppjuv"]
+font = ExtResource("5_mjqtt")
+font_size = 95
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_mjqtt"]
+font = ExtResource("5_mjqtt")
+font_size = 70
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ipgag"]
+font = ExtResource("5_mjqtt")
+font_size = 70
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_646k0"]
+font = ExtResource("5_mjqtt")
+font_size = 70
+font_color = Color(0, 0, 0, 1)
+
+[node name="Node2D" type="Node2D" unique_id=232336773]
+script = ExtResource("1_4hxq3")
+
+[node name="GrassSky" type="Sprite2D" parent="." unique_id=1170934888]
+position = Vector2(587.00006, 326)
+scale = Vector2(20.21875, 20.21875)
+texture = ExtResource("2_yrknh")
+
+[node name="CricketBatDesign" type="Sprite2D" parent="." unique_id=1753074545]
+position = Vector2(569.3264, 118.326385)
+rotation = 3.140243
+scale = Vector2(3.78125, 3.78125)
+texture = ExtResource("3_w1nw0")
+
+[node name="CricketBall" type="Sprite2D" parent="." unique_id=1263331335]
+position = Vector2(192.49998, 258.5)
+scale = Vector2(4.0937495, 4.0937495)
+texture = ExtResource("4_w1nw0")
+
+[node name="CricketBall2" type="Sprite2D" parent="." unique_id=501016381]
+position = Vector2(194.49997, 366.49988)
+scale = Vector2(4.11157, 4.11157)
+texture = ExtResource("4_w1nw0")
+
+[node name="CricketBall3" type="Sprite2D" parent="." unique_id=568711525]
+position = Vector2(197.49997, 477.49988)
+scale = Vector2(4.1875, 4.1875)
+texture = ExtResource("4_w1nw0")
+
+[node name="Settings" type="Label" parent="." unique_id=1005140058]
+offset_left = 483.3264
+offset_top = 70.326385
+offset_right = 798.3264
+offset_bottom = 173.32639
+size_flags_stretch_ratio = 0.0
+text = "Settings "
+label_settings = SubResource("LabelSettings_ppjuv")
+
+[node name="Volume" type="Label" parent="." unique_id=1247212930]
+offset_left = 258.49997
+offset_top = 220.49994
+offset_right = 523.5
+offset_bottom = 316.49994
+text = "Volume"
+label_settings = SubResource("LabelSettings_mjqtt")
+
+[node name="Music" type="Label" parent="." unique_id=1050724751]
+offset_left = 258.49997
+offset_top = 324.49988
+offset_right = 401.49997
+offset_bottom = 395.49988
+text = "Music"
+label_settings = SubResource("LabelSettings_ipgag")
+
+[node name="Control" type="Label" parent="." unique_id=1479620301]
+offset_left = 258.49997
+offset_top = 432.49988
+offset_right = 1006.5
+offset_bottom = 536.49994
+text = "Controls: Press bar to hit"
+label_settings = SubResource("LabelSettings_646k0")
+
+[node name="Back" type="Button" parent="." unique_id=280682548]
+offset_left = 36.0
+offset_top = 24.0
+offset_right = 144.0
+offset_bottom = 66.0
+text = "Back"
+
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]

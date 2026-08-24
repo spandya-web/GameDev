@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://b7jaxaxug3f1n"]
+
+[ext_resource type="Script" uid="uid://blqxb7klrkiuq" path="res://Scripts/menu.gd" id="1_s2c3o"]
+[ext_resource type="Texture2D" uid="uid://n5t7g7ubhxev" path="res://Assests/Grass_sky.png" id="1_syfuq"]
+[ext_resource type="Texture2D" uid="uid://bqhptpq7t6pxn" path="res://Assests/Character.png" id="2_s2c3o"]
+[ext_resource type="Texture2D" uid="uid://bvdk5k1kunqhp" path="res://Assests/Cricket_bat_design.png" id="3_ma218"]
+
+[sub_resource type="FontVariation" id="FontVariation_s2c3o"]
+
+[node name="Node2D" type="Node2D" unique_id=1283448299]
+script = ExtResource("1_s2c3o")
+
+[node name="GrassSky" type="Sprite2D" parent="." unique_id=433381251]
+position = Vector2(578.7499, 324.37497)
+scale = Vector2(20.27344, 20.27344)
+texture = ExtResource("1_syfuq")
+
+[node name="Character" type="Sprite2D" parent="." unique_id=640716221]
+position = Vector2(177, 369)
+scale = Vector2(9.35, 9.35)
+texture = ExtResource("2_s2c3o")
+
+[node name="CricketBatDesign2" type="Sprite2D" parent="." unique_id=1265309335]
+position = Vector2(562, 311)
+rotation = 3.1291935
+scale = Vector2(2.8115163, 2.8115163)
+texture = ExtResource("3_ma218")
+
+[node name="CricketBatDesign3" type="Sprite2D" parent="." unique_id=1602972872]
+position = Vector2(567, 451.99997)
+scale = Vector2(2.8007813, 2.8007813)
+texture = ExtResource("3_ma218")
+
+[node name="ButtonManager" type="Control" parent="." unique_id=1122454895]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Play" type="Button" parent="ButtonManager" unique_id=1492051291]
+layout_mode = 0
+offset_left = 393.0
+offset_top = 130.0
+offset_right = 729.0
+offset_bottom = 210.0
+text = "Start 
+"
+
+[node name="Settings" type="Button" parent="ButtonManager" unique_id=204760945]
+layout_mode = 0
+offset_left = 393.0
+offset_top = 273.0
+offset_right = 729.0
+offset_bottom = 352.0
+theme_override_fonts/font = SubResource("FontVariation_s2c3o")
+text = "Settings"
+
+[node name="Quit" type="Button" parent="ButtonManager" unique_id=1172833834]
+layout_mode = 0
+offset_left = 393.0
+offset_top = 412.0
+offset_right = 729.0
+offset_bottom = 490.0
+text = "Quit"
+
+[connection signal="pressed" from="ButtonManager/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="ButtonManager/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="ButtonManager/Quit" to="." method="_on_quit_pressed"]

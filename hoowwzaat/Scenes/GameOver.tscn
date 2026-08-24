@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://dx1mi3mygg7lf"]
+
+[ext_resource type="Script" uid="uid://djsubq78mw2hs" path="res://Scripts/game_over.gd" id="1_ktc4i"]
+[ext_resource type="Texture2D" uid="uid://n5t7g7ubhxev" path="res://Assests/Grass_sky.png" id="2_uib17"]
+[ext_resource type="FontFile" uid="uid://bqyeybovmsbrc" path="res://Assests/CutePixel.ttf" id="3_rdiyk"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_bfgkh"]
+font = ExtResource("3_rdiyk")
+font_size = 150
+font_color = Color(0, 0, 0, 1)
+
+[node name="Node2D" type="Node2D" unique_id=1004485646]
+script = ExtResource("1_ktc4i")
+
+[node name="GrassSky" type="Sprite2D" parent="." unique_id=402231665]
+position = Vector2(587.50006, 324.25)
+scale = Vector2(20.234375, 20.234375)
+texture = ExtResource("2_uib17")
+
+[node name="Label" type="Label" parent="." unique_id=1799971188]
+offset_left = 291.0
+offset_top = 223.0
+offset_right = 881.0
+offset_bottom = 374.0
+text = "Game Over"
+label_settings = SubResource("LabelSettings_bfgkh")
+
+[node name="Restart" type="Button" parent="." unique_id=93938497]
+offset_left = 407.0
+offset_top = 374.0
+offset_right = 698.0
+offset_bottom = 446.0
+text = "Restart "
+
+[node name="Menu" type="Button" parent="." unique_id=60934374]
+offset_left = 407.0
+offset_top = 465.0
+offset_right = 698.0
+offset_bottom = 537.0
+text = "Menu"
+
+[connection signal="pressed" from="Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="Menu" to="." method="_on_menu_pressed"]

@@ -1,0 +1,95 @@
+[gd_scene format=3 uid="uid://b5s26dlgujl21"]
+
+[ext_resource type="Script" uid="uid://nl2n6vy1di8q" path="res://Scripts/pause.gd" id="1_p8av3"]
+[ext_resource type="Texture2D" uid="uid://n5t7g7ubhxev" path="res://Assests/Grass_sky.png" id="2_n136c"]
+[ext_resource type="Texture2D" uid="uid://bvdk5k1kunqhp" path="res://Assests/Cricket_bat_design.png" id="3_5o7im"]
+[ext_resource type="Texture2D" uid="uid://mbexoe5vhv84" path="res://Assests/Cricket_ball.png" id="4_rjsbm"]
+[ext_resource type="FontFile" uid="uid://bqyeybovmsbrc" path="res://Assests/CutePixel.ttf" id="5_5o7im"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_rjsbm"]
+font = ExtResource("5_5o7im")
+font_size = 70
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_daqr7"]
+font = ExtResource("5_5o7im")
+font_size = 70
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_6v82q"]
+font = ExtResource("5_5o7im")
+font_size = 70
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_jv2ls"]
+font = ExtResource("5_5o7im")
+font_size = 70
+font_color = Color(0, 0, 0, 1)
+
+[node name="Node2D" type="Node2D" unique_id=1715419614]
+script = ExtResource("1_p8av3")
+
+[node name="GrassSky" type="Sprite2D" parent="." unique_id=1233780945]
+position = Vector2(593, 325)
+scale = Vector2(20.28125, 20.28125)
+texture = ExtResource("2_n136c")
+
+[node name="CricketBatDesign" type="Sprite2D" parent="." unique_id=1881775494]
+position = Vector2(621, 226.99998)
+scale = Vector2(3.1796875, 3.1796875)
+texture = ExtResource("3_5o7im")
+
+[node name="CricketBatDesign2" type="Sprite2D" parent="." unique_id=265329676]
+position = Vector2(614.52527, 448.54993)
+scale = Vector2(3.1484377, 3.1484377)
+texture = ExtResource("3_5o7im")
+
+[node name="CricketBatDesign3" type="Sprite2D" parent="." unique_id=1303218650]
+position = Vector2(598.5253, 110.54996)
+rotation = -3.140812
+scale = Vector2(3.0327444, 2.9124763)
+texture = ExtResource("3_5o7im")
+
+[node name="CricketBatDesign4" type="Sprite2D" parent="." unique_id=1056804052]
+position = Vector2(588.5253, 330.54993)
+rotation = 3.1430514
+scale = Vector2(3.0194318, 3.0194318)
+texture = ExtResource("3_5o7im")
+
+[node name="CricketBall" type="Sprite2D" parent="." unique_id=971535410]
+position = Vector2(1145, 575)
+scale = Vector2(3.6875, 3.6875)
+texture = ExtResource("4_rjsbm")
+
+[node name="Restart" type="Label" parent="." unique_id=670585846]
+offset_left = 550.0
+offset_top = 75.0
+offset_right = 783.0
+offset_bottom = 158.0
+text = "Restart "
+label_settings = SubResource("LabelSettings_rjsbm")
+
+[node name="Resume" type="Label" parent="." unique_id=1924936837]
+offset_left = 480.0
+offset_top = 188.0
+offset_right = 695.0
+offset_bottom = 279.0
+text = "Resume "
+label_settings = SubResource("LabelSettings_daqr7")
+
+[node name="Quit" type="Label" parent="." unique_id=1608062043]
+offset_left = 573.0
+offset_top = 300.0
+offset_right = 670.0
+offset_bottom = 445.0
+text = "Quit
+"
+label_settings = SubResource("LabelSettings_6v82q")
+
+[node name="Settings" type="Label" parent="." unique_id=932245384]
+offset_left = 458.0
+offset_top = 406.0
+offset_right = 688.0
+offset_bottom = 496.0
+text = "Settings"
+label_settings = SubResource("LabelSettings_jv2ls")

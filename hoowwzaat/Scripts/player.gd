@@ -4,15 +4,17 @@ var swinging = false
 @onready var bat = $Bat
 @onready var animation_player = $AnimationPlayer
 
+# 
 func _ready():
 	bat.monitoring = false
 
+# Takes space bar input to swing 
 func _process(delta):
 	if Input.is_action_just_pressed("ui_accept"):
 		swing()
 
+# Makes the bat swing 
 func swing():
-
 	if swinging:
 		return
 		
